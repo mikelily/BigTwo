@@ -1,24 +1,21 @@
-
-
 cc.Class({
     extends: cc.Component,
 
+
     properties: {
-        startBtn : cc.Button
-        //table : cc.scene
+       startBtn: cc.Button
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-    onStartBtnClicked: function() {
-        //console.log('Start button clicked!');
-        cc.director.loadScene('tabble');
+    onLoad: function () {
+       this.startBtn.node.on('click', this.enterTable, this);
     },
 
-    start () {
+    // onStartBtnClicked: function() {
+    //     //console.log('Start button clicked!');
+    //     cc.director.loadScene('Table');
+    // },
 
-    },
-
-    // update (dt) {},
+    enterTable: function (event) {
+       cc.director.loadScene('Table');
+    }
 });
