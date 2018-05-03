@@ -58,6 +58,15 @@ cc.Class({
             } 
             
             shuffle(cardMatrix); 
+
+            var sortCards = new Array();
+            for(var i = 0 ; i<13; i++){
+                sortCards[i] = cardMatrix[i];
+            }
+            sortCards.sort(function(a, b){return a-b});
+            for(var i = 0 ; i<13; i++){
+                cardMatrix[i] = sortCards[i];
+            }
             
             
             function shuffle(cardMatrix){
@@ -84,13 +93,13 @@ cc.Class({
                 if(i == 13)
                     break;
                 var sf = ttt[cardMatrix[i]];
-                //cc.log(sf);
+                cc.log(cardMatrix[i]);
                 // console.log(JSON.stringify(sf));
                 // console.log(sf._name);
 
                 var pokerSprite = cc.instantiate(poker);
                 pokerSprite.getComponent(cc.Sprite).spriteFrame = sf;
-                pokerSprite.getComponent(cc.Sprite).spriteFrame
+                //pokerSprite.getComponent(cc.Sprite).spriteFrame
                 self.pokerNode.addChild(pokerSprite);
                 pokerSprite.setPosition(i*72, 0);
                 //pokerSprite.status = POSITION_DOWN;
