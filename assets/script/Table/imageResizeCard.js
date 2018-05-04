@@ -5,10 +5,13 @@ cc.Class({
         pressedScale: 1,
         transDuration: 0,
         sizeFlag:true,
+        // cannelBtn: cc.Button,
         
     },
 
     onLoad: function(){
+        // this.cannelBtn.node.on('click', this.cannelAll, this);
+
         var self = this;
         
         self.initScale = this.node.scale;
@@ -35,6 +38,12 @@ cc.Class({
 
         this.node.on('touchstart', onTouchDown, this.node);
     },
+
+    // cannelAll: function(){
+    //     var self = this;
+    //     console.log(self.node.y);
+
+    // },
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {},
