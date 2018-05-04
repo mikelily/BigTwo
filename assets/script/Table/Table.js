@@ -58,7 +58,8 @@ cc.Class({
             } 
             
             shuffle(cardMatrix); 
-
+            
+            //sort card
             var sortCards = new Array();
             for(var i = 0 ; i<13; i++){
                 sortCards[i] = cardMatrix[i];

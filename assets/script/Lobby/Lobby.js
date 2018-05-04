@@ -16,6 +16,6 @@ cc.Class({
     // },
 
     enterTable: function (event) {
-       cc.director.loadScene('Table');
+       cc.director.loadScene('Table2');
     }
 });
